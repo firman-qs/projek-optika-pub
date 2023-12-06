@@ -1,0 +1,90 @@
+% problem style theorem
+\newtheoremstyle{problemstyle}  %   <name>
+        {0pt}                       % <space above>
+        {0pt}                       % <space below>
+        {\normalfont}               % <body font>
+        {}                          % <indent amount}
+        {\bfseries}                 % <theorem head font>
+        {\normalfont\bfseries}      % <punctuation after theorem head>
+        {.5em}                      % <space after theorem head>
+        {}                          % <theorem head spec (can be left empty, meaning `normal')>
+\theoremstyle{problemstyle}
+\newtheorem{problem}{\sffamily Problem}[section]
+
+% Important Equation
+\newenvironment{Equation}
+    {
+        \vspace{0.3em}\begin{mdframed}[
+            backgroundcolor=gray!25,
+            linecolor=black!90!white,
+            linewidth=0.6pt,
+            skipabove=0.5em,
+            skipbelow=0.5em,
+            innertopmargin=0.6em,
+            innerbottommargin=0.6em,
+            topline=true,
+            leftline=true, 
+        ]\begin{equation}
+    }
+    {
+        \end{equation}\end{mdframed}
+    }
+
+\newenvironment{problembox}{
+    \begin{mdframed}[
+        backgroundcolor=gray!15!white,
+        linecolor=black!90!white,
+        linewidth=0.5pt,
+        innertopmargin=10pt,
+        innerbottommargin=10pt,
+        innerleftmargin=5pt,
+        innerrightmargin=5pt,
+        topline=false,
+        leftline=false, 
+    ]
+}{
+    \end{mdframed}
+}
+
+
+% #-------------------------------
+%	Uncountered Box
+% #-------------------------------
+\mdfdefinestyle{fqsboxstyle}{
+	skipabove=1.5\topskip,
+	skipbelow=.5\topskip,
+	rightmargin=0pt,
+	leftmargin=0pt,
+	%innertopmargin=3pt,
+	%innerbottommargin=3pt,
+	innerrightmargin=7pt,
+	innerleftmargin=7pt,
+	topline=false,
+	bottomline=false,
+	rightline=false,
+	leftline=false,
+	%linewidth=1pt,
+	%roundcorner=0pt,
+	%font={},
+	%frametitlefont={},
+	frametitlerule=true,
+	linecolor=black,
+	%backgroundcolor=LightBlue,
+	fontcolor=black,
+	%frametitlebackgroundcolor=LightBlue,
+}
+\newmdenv[
+	style=fqsboxstyle,
+	backgroundcolor=RoyalBlue!25!White,
+	frametitlebackgroundcolor=RoyalBlue!25!White,
+]{fqsbox}
+
+%-------------------------------
+%	Countered Box
+%-------------------------------
+\newcounter{fqscounter}[section]
+\newenvironment{fqscounter}[1][]{\refstepcounter{fqscounter}
+	\begin{fqsbox}[frametitle=Comment~\thesection\autodot\thefqscounter#1.]
+}{
+	\end{fqsbox}\vspace{1em}
+}

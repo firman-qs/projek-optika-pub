@@ -1,0 +1,99 @@
+% for note
+% \newcommand{\handnote}[1]{\sidenote{\footnotesize#1}}
+\newcommand{\note}[1]{\marginpar{\footnotesize\fontfamily{cmss}\selectfont#1}}
+\renewcommand{\thefootnote}{\arabic{footnote}}
+
+% indexed note
+\newcommand{\Note}[3]{\note{\vspace{#3}{#1}}\index{#2}}
+
+% eqauation
+\DeclareMathAlphabet{\mathbfsf}{\encodingdefault}{\sfdefault}{bx}{n}
+% \renewcommand{\vec}[1]{\mathbfsf{#1}}
+\newcommand{\vect}[1]{\vec{\mathbf{#1}}}
+\newcommand{\vectwv}[1]{\tilde{\mathbf{#1}}}
+\newcommand{\brak}[1]{\langle{#1}\rangle}
+\newcommand{\rbrak}[1]{\left({#1}\right)}
+\newcommand{\sbrak}[1]{\left[{#1}\right]}
+\newcommand{\cbrak}[1]{\left\{{#1}\right\}}
+\newcommand{\abrak}[1]{\left|{#1}\right|}
+\newcommand{\intInf}{\int_{-\infty}^{+\infty}}
+\newcommand{\intinf}{\int_{-\infty}^{\infty}}
+\newcommand{\conj}{\mathlarger{*}}%
+\newcommand{\Psiconj}{\Psi^\conj}
+\newcommand{\Psixt}{\Psi\rbrak{x,t}}
+\newcommand{\hi}{\hat{i}}
+\newcommand{\hj}{\hat{j}}
+\newcommand{\hk}{\hat{k}}
+\newcommand{\hx}{\hat{x}}
+\newcommand{\hy}{\hat{y}}
+\newcommand{\hz}{\hat{z}}
+\newcommand{\hr}{\mathbf{\hat{r}}}
+\newcommand{\hbx}{\mathbf{\hat{x}}}
+\newcommand{\hby}{\mathbf{\hat{y}}}
+\newcommand{\hbz}{\mathbf{\hat{z}}}
+\newcommand{\hbk}{\mathbf{\hat{k}}}
+\newcommand{\vB}{\vect{B}}
+\newcommand{\vE}{\vect{E}}
+\newcommand{\vD}{\vect{D}}
+\newcommand{\vH}{\vect{H}}
+\newcommand{\vk}{\vect{k}}
+\newcommand{\vr}{\vect{r}}
+\newcommand{\vl}{\vect{l}}
+\newcommand{\tB}{\tilde{B}}
+\newcommand{\tE}{\tilde{E}}
+\newcommand{\tD}{\tilde{D}}
+\newcommand{\tH}{\tilde{H}}
+\newcommand{\curl}[1]{\vect{\nabla}\times\vect{#1}}
+\newcommand{\divg}[1]{\vect{\nabla}\cdot\vect{#1}}
+
+% for label 
+\newcommand{\labch}[1]{\label{ch:#1}}
+\newcommand{\labsec}[1]{\label{sec:#1}}
+\newcommand{\labsubsec}[1]{\label{subsec:#1}}
+\newcommand{\labequ}[1]{\label{eq:#1}}
+\newcommand{\labfig}[1]{\label{fig:#1}}
+\newcommand{\labtab}[1]{\label{tbl:#1}}
+% and ref
+\newcommand{\refch}[1]{\cref{ch:#1}}
+\newcommand{\refsec}[1]{\cref{sec:#1}}
+\newcommand{\refsubsec}[1]{\cref{subsec:#1}}
+\newcommand{\refequ}[1]{\cref{eq:#1}}
+\newcommand{\reffig}[1]{\cref{fig:#1}}
+\newcommand{\reftab}[1]{\cref{tbl:#1}}
+% for Capital first letter ref
+\newcommand{\Refch}[1]{\Cref{ch:#1}}
+\newcommand{\Refsec}[1]{\Cref{sec:#1}}
+\newcommand{\Refsubsec}[1]{\Cref{subsec:#1}}
+\newcommand{\Refequ}[1]{\Cref{eq:#1}}
+\newcommand{\Reffig}[1]{\Cref{fig:#1}}
+\newcommand{\Reftab}[1]{\Cref{tbl:#1}}
+
+% link
+\newcommand{\tautkan}{\protect\hyperlink}
+
+% quote
+\newcommand{\q}[1]{``#1''}
+
+% new rule
+\newcommand{\doublerule}[1][.4pt]{%
+	\noindent
+	\makebox[0pt][l]{\rule[1.0ex]{\linewidth}{#1}}%
+	\rule[.0ex]{\linewidth}{#1}
+	\vspace{-0.5cm}
+}
+\newcommand{\singlerule}[1][.4pt]{%
+	\noindent
+	\makebox[0pt][l]{\rule[.0ex]{\linewidth}{#1}}%
+	\rule[.0ex]{\linewidth}{0pt}
+	\vspace{0em}
+}
+
+% etc
+\newcommand{\autodot}{.}
+\newcommand*{\plogo}{\fbox{$\mathcal{PL}$}}
+
+% \renewcommand{\labelitemi}{\tiny$\blacktriangleright$}
+% \renewcommand{\labelitemii}{\textbullet}
+
+
+

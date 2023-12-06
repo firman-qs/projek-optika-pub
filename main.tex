@@ -1,0 +1,72 @@
+\documentclass[a4paper, 12pt, oneside]{book}
+% \documentclass[a4paper, 11pt, oneside]{book}
+
+\input{fqsStyle/init}
+
+% \title{LA}
+% \author{Firman Qashdus Sabil.}
+% \date{\today}
+\begin{document}
+% \begin{titlepage}
+% \thispagestyle{empty}
+% \maketitle
+% \hrule\vspace{1em}
+% \end{titlepage}
+% \tableofcontents
+\input{contents/cover}
+\input{fqsStyle/frontpart}
+
+\newpage
+% BEGIN DOCUMENTS
+% >>>>>>>>>>>>>>>>>>> CHAPTER 1 PENDAHULUAN
+\chapter{Pendahuluan}
+\section{Latar Belakang}
+\input{contents/1-1-latar-belakang.tex}
+\section{Tujuan}
+\input{contents/1-2-Tujuan.tex}
+\section{Manfaat}
+\input{contents/1-3-Manfaat.tex}
+
+% >>>>>>>>>>>>>>>>>>> CHAPTER 2 DASAR TEORI
+\chapter{Dasar Teori}
+\section{Cahaya}
+\input{contents/2-1-cahaya.tex}
+
+% >>>>>>>>>>>>>>>>>>> CHAPTER 3 PERCOBAAN
+\chapter{Metode Percobaan}
+\section{Lokasi dan Waktu Percobaan}
+\input{contents/3-1-lokasi-dan-waktu-percobaan.tex}
+\section{Alat dan Bahan}
+\input{contents/3-2-alat-dan-bahan.tex}
+% \section{Skema Percobaan}
+% \input{contents/3-3-skema-percobaan.tex}
+\section{Variabel Percobaan}
+\input{contents/3-4-variabel-percobaan.tex}
+\section{Langkah Percobaan}
+\input{contents/3-5-langkah-percobaan.tex}
+\section{Metode Analisis Data}
+\input{contents/3-6-metode-analisis-data.tex}
+
+% >>>>>>>>>>>>>>>>>>> CHAPTER DATA 4 DAN ANALISIS DATA
+\chapter{Data dan Analisis Data}
+\section{Data Percobaan}
+\input{contents/4-1-data-percobaan.tex}
+\section{Analisis Data}
+\input{contents/4-2-analisis-data.tex}
+
+% >>>>>>>>>>>>>>>>>>> CHAPTER 5 PEMBAHASAN
+\chapter{Pembahasan}
+\input{contents/5-pembahasan.tex}
+
+% >>>>>>>>>>>>>>>>>>> CHAPTER 6 KESIMPULAN DAN PENUTUP
+\chapter{Penutup}
+\input{contents/6-penutup.tex}
+
+\bibliographystyle{ieeetr}
+\bibliography{referensi}
+
+% >>>>>>>>>>>>>>>>>>> CHAPTER KESIMPULAN DAN PENUTUP
+\chapter{Lampiran}
+\input{contents/lampiran.tex}
+
+\end{document}

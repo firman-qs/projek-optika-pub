@@ -1,0 +1,107 @@
+\usepackage[
+    top=25mm,
+    bottom=25mm,
+    right=25mm,
+    left=30mm,
+    marginparwidth=10pt,
+    marginparsep=15pt
+]{geometry}
+
+
+% \usepackage{natbib}
+\usepackage[nottoc]{tocbibind}
+\usepackage{microtype}
+
+\usepackage[english]{babel}
+\usepackage{blindtext}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{siunitx}
+% \usepackage{relsize}
+\usepackage{cancel}
+\usepackage{mathtools}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+% \usepackage[notextcomp]{stix2}
+% \usepackage{charter}
+\usepackage{tgtermes}
+\renewcommand{\sfdefault}{ptm}
+% \usepackage{stix2}
+% \usepackage[scaled=0.865]{helvet}
+
+\usepackage[export]{adjustbox}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage[svgnames, table]{xcolor}
+\usepackage{longtable}
+\usepackage[explicit,newparttoc]{titlesec}
+\usepackage{titletoc}
+\usepackage{etoolbox}
+\usepackage{adjustbox}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{booktabs, multicol, multirow}
+\renewcommand{\aboverulesep}{0pt}
+\renewcommand{\belowrulesep}{0pt}
+\renewcommand{\arraystretch}{1.2}
+% \setlength\cellspacetoplimit{5pt}
+% \setlength\cellspacebottomlimit{5pt}
+
+
+\usepackage{array}
+\newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
+\newcolumntype{C}[1]{>{\PreserveBackslash\centering}p{#1}}
+\newcolumntype{R}[1]{>{\PreserveBackslash\raggedleft}p{#1}}
+\newcolumntype{L}[1]{>{\PreserveBackslash\raggedright}p{#1}}
+
+\usepackage{fancyhdr}
+
+\usepackage{mdframed}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{lastpage}
+
+\usepackage{marginfix}
+\usepackage{marginnote}
+\usepackage{chngcntr}
+
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+	breaklinks,
+	linktocpage=true,
+    citecolor=blue,
+    filecolor=blue,
+    linkcolor=blue,
+    urlcolor=blue
+}
+\usepackage[noabbrev]{cleveref}
+
+% \usepackage[toc,page]{appendix}
+\usepackage[toc,page,titletoc,title]{appendix}
+\usepackage{bookmark}
+
+\usepackage{xpatch}
+\usepackage{ifthen}
+
+\usepackage{imakeidx}
+\usepackage[toc,acronym,section]{glossaries}
+\usepackage[
+	labelfont={color=black,bf,sf},
+    % singlelinecheck=false
+]{caption}
+\usepackage{hhline}
+
+\usepackage{changepage}                 % adjust margins for selected portions
+\usepackage{lipsum}
+
+% wide page for side by side figures, tables, etc
+\newlength{\offsetpage}
+\setlength{\offsetpage}{2.0cm}
+\newenvironment{widepage}{\begin{adjustwidth}{-\offsetpage}{-\offsetpage}%
+    \addtolength{\textwidth}{2\offsetpage}}%
+{\end{adjustwidth}}

@@ -1,0 +1,203 @@
+% Title Page style
+\makeatletter
+\renewcommand{\maketitle}{
+    \bgroup\setlength{\parindent}{0pt}
+    \begin{flushleft}
+      {\Huge\sffamily\bfseries\@title}
+      \vskip 1.5em
+      {\sffamily\@author}
+      {\sffamily\@date}
+    \end{flushleft}\egroup
+}
+\makeatother
+
+
+\setlist[itemize]{noitemsep}
+\setlist[enumerate]{noitemsep}
+\setlist[description]{noitemsep}
+
+% #--------------------------- -----
+% Part Style
+% #--------------------------- -----
+\titleformat{\part}
+	[display]
+	{\centering\normalfont\Huge\bfseries}
+	{\vspace{3pt}\color{black!50}\MakeUppercase{\sffamily{\partname} {\thepart} {#1}}}
+	{0pt}
+	{\vspace{0.25em}\color{black!20}\titlerule[4pt]\vspace{1pc}}
+	\titlespacing*{\part}{0pt}{0pt}{20pt}
+
+
+% #--------------------------- -----
+% Chapter Style
+% #--------------------------- -----
+% \titleformat{\chapter}
+% 	[block]
+%     {\bfseries\Huge\sffamily}
+%     {\rlap{\hspace*{\dimexpr\linewidth+\marginparsep}
+% 		\parbox{\marginparwidth}{\centering\color{black!90}{\Large\MakeUppercase{\so{\chaptername}}}\\[1ex]\color{black!80}\scalebox{4}{\thechapter}}}}
+%     {0pt}
+%     {\color{black!90}\begin{tabularx}{\linewidth}{@{}>
+% 		{\centering\arraybackslash}X>{\centering\arraybackslash}p{1cm}@{\vspace{1.5ex}}}& \makebox[0pt]{\centering}\\[2.5ex] #1\end{tabularx}}
+%     [\vspace{0.25em}{\color{black!50}\titlerule[4pt]}\vspace{1.5em}]
+% \titlespacing{\chapter}{0pt}{-5ex}{20ex}
+\titleformat{\chapter}
+	[display]
+	{\centering\normalfont\Huge\bfseries}
+    {\vspace{3pt}\color{black!90}{\sffamily{\chaptername\ {\thechapter} {#1}}}}
+	{0pt}
+	{\vspace{0.25em}\color{black!30}\titlerule[2pt]\vspace{1pc}}
+	\titlespacing*{\chapter}{0pt}{0pt}{0em}
+
+\titleformat{name=\chapter, numberless}
+  [display]
+	{\centering\normalfont\Huge\bfseries}
+    {\vspace{3pt}\color{black!90}{\sffamily{{} {#1}}}}
+	{0pt}
+	{\vspace{0.25em}\color{black!30}\titlerule[2pt]\vspace{1pc}}
+	\titlespacing*{\chapter}{0pt}{0pt}{0em}
+
+\addto\captionsenglish{\renewcommand{\chaptername}{Bab}}
+
+% #--------------------------- -----
+% Section Style
+% #--------------------------- -----
+% \titleformat{\section}[block]
+%   {\large\bfseries}% format applied to label+text
+%   {\color{black}\makebox[13pt][r]{\sffamily\thesection\hspace{5pt}\rule{8pt}{8pt}\hspace{5pt}}{\MakeUppercase{\large\sffamily{#1}}}}
+%   {0pt}
+%   {}% before the title body
+%   []% after the title body
+% \titleformat{name=\section, numberless}[block]
+%   {\large\bfseries}% format applied to label+text
+%   {\color{black}\makebox[0cm][r]{\sffamily\thesection\hspace{5pt}\rule{8pt}{8pt}\hspace{5pt}}{\MakeUppercase{\large\sffamily{#1}}}}
+%   {0pt}
+%   {}% before the title body
+%   []% after the title body
+% \titleformat{\section}[block]%
+%   {\large\bfseries}% format applied to label+text
+%   {\color{black!50}\titlerule\vspace{0.5em}\\\color{black}\sffamily\thesection\ {{\large\sffamily{#1}}}}
+%   {0pt}
+%   {}% before the title body
+%   []% after the title body
+% \titleformat{name=\section, numberless}[block]
+%   {\large\bfseries}% format applied to label+text
+%   {\color{black!50}\titlerule\vspace{0.5em}\\\color{black}\sffamily\ {{\large\sffamily{#1}}}}
+%   {0pt}
+%   {}% before the title body
+%   []% after the title body
+  
+  
+% #--------------------------- -----
+% Subsection Style
+% #--------------------------- -----
+% \titleformat{\subsection}%
+%   {\normalsize\bfseries}% format applied to label+text
+%   {\makebox[0cm][r]{\sffamily\thesubsection\hspace{5pt}\rule{7pt}{7pt}\hspace{5pt}}{\normalsize\sffamily{#1}}}% label
+%   {0pt}
+%   {}% before the title body
+%   []% after the title body
+\titleformat{\subsection}%
+  {\normalsize\bfseries}% format applied to label+text
+  {\sffamily\thesubsection\ {{\normalsize\sffamily{#1}}}}
+  {0pt}
+  {}% before the title body
+  []% after the title body
+  
+  
+
+% #--------------------------- -----
+% Header Style
+% #--------------------------- -----
+\setlength{\headheight}{14.5pt}
+\pagestyle{fancy}
+\fancyhead{}\fancyfoot{}
+\fancyhead[LO]{\sffamily\small\nouppercase{\leftmark}}
+\fancyhead[R]{\sffamily\small\nouppercase{\textit{Oleh: Firman Qashdus Sabil}}}
+\fancyfoot[OL]{\thepage}%
+\renewcommand{\headrulewidth}{0.5pt}
+% for first page
+\fancypagestyle{plain}
+{
+    \setlength{\headheight}{14pt}
+    \fancyhf{}%
+    \fancyfoot[R]{\sffamily\small{\sffamily\bfseries\thepage}}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0.4pt}
+}
+
+
+% #--------------------------- -----
+% Table of Contents, Figures, and Tables
+% #--------------------------- -----
+% if you want to add doted line between content-name and content page
+% change the 4th paremater --> {\contentspage} to this: {\titlerule*[0.6pc]{.}\contentspage}
+\setlength{\titlewidth}{0.6\textwidth} % title rule reduced to 0.6 of textwidth instead of full textwidth
+\let\oldtitleline\titleline{}
+\renewcommand{\titleline}{\oldtitleline*}
+\titlecontents{chapter}
+  [2.1em]
+  {\vspace{1em}\bfseries\large\sffamily}
+  {\contentslabel[\thecontentslabel\hspace{0.35em}\rule{0.6em}{0.6em}]{2em}}
+  {\hspace{-1.8em}}
+  {\hfill\contentspage}
+  [\vspace{0.2em}]
+
+\titlecontents{section}
+  [4.2em]
+  {\sffamily}
+  {\contentslabel{2.5em}}
+  {\hspace*{0em}}
+  {\contentspage}
+  [\vspace{0.2em}]
+
+\titlecontents{subsection}
+  [7.1em]
+  {\sffamily}
+  {\contentslabel{2.5em}}
+  {\hspace*{0em}}
+  {\contentspage}
+  [\vspace{0.2em}]
+
+% #--------------------------- -----
+% Caption and Ref Name
+% #--------------------------- -----
+\addto\captionsenglish{\renewcommand{\figurename}{Gambar}}
+\addto\captionsenglish{\renewcommand{\tablename}{Tabel}}
+\addto\captionsenglish{\renewcommand{\bibname}{Referensi}}
+\addto\captionsenglish{\renewcommand{\chaptername}{Bab}}
+
+\crefname{equation}{persamaan}{equations}
+\Crefname{equation}{Persamaan}{Equations}
+\crefname{table}{tabel}{tables}
+\Crefname{table}{Tabel}{Tables}
+\crefname{figure}{gambar}{gambar}
+\Crefname{figure}{Gambar}{Figures}
+
+
+% #--------------------------- -----
+% Bibliography using natbib
+% #--------------------------- -----
+
+
+
+% #--------------------------- -----
+% Indentation
+% #--------------------------- -----
+\setlength\parindent{1.5em}
+
+
+% #--------------------------- -----
+% Get rid off underfull badness warning
+% Since this usually not clearly look 
+% by the eye. 
+% (you may want to still show it if 
+% really want perfect typset)
+% #--------------------------- -----
+\hbadness=99999
+\vbadness=99999
+
+
+\renewcommand{\contentsname}{Daftar Isi}
+\renewcommand{\listfigurename}{Daftar Gambar}
+\renewcommand{\listtablename}{Daftar Tabel}
